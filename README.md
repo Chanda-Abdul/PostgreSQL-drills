@@ -24,6 +24,11 @@ Write a query that returns all of the restaurants, with all of the fields.
 
 Write a query that returns all of the Italian restaurants, with all of the fields
 
+````
+SELECT * FROM restaurants 
+WHERE cuisine = 'Italian';
+````
+
 ## 3. Get 10 Italian restaurants, subset of fields
 
 Write a query that gets 10 Italian restaurants, returning only the id and name fields.
