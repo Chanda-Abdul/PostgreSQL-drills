@@ -98,10 +98,28 @@ address_street: 'Atlantic Avenue',
 address_zipcode: '11231'
 ```
 
+````
+INSERT INTO restaurants 
+  (name, borough, cuisine, address_building_number, address_street, address_zipcode) 
+  VALUES ('Byte Cafe', 'Brooklyn', 'coffee', '123', 'Atlantic Avenue', '11231');
+````
+
 
 ## 9. Create a restaurant and return id and name
 
 Create a restaurant with values of your choosing, and return the id and name.
+
+````
+INSERT INTO restaurants
+  (name, borough, cuisine, address_building_number, address_street, address_zipcode)
+  VALUES ('Lula Bagel', 'Brooklyn', 'coffee', '816', 'Nostrand Avenue', '11216');
+````
+
+````
+SELECT id, name 
+FROM restaurants 
+WHERE name = 'Lula Bagel';
+````
 
 ## 10. Create three restaurants and return id and name
 
