@@ -33,6 +33,13 @@ WHERE cuisine = 'Italian';
 
 Write a query that gets 10 Italian restaurants, returning only the id and name fields.
 
+````
+SELECT id, name 
+FROM restaurants 
+WHERE cuisine = 'Italian' 
+LIMIT 10;
+````
+
 ## 4. Count of Thai restaurants
 
 Write a query that returns the number of Thai restaurants.
