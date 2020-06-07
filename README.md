@@ -124,6 +124,21 @@ WHERE name = 'Lula Bagel';
 ## 10. Create three restaurants and return id and name
 
 Create three restaurants using a single command, with values of your choosing, returning the id and name of each restaurant.
+````
+INSERT INTO restaurants
+  (name, borough, cuisine, address_building_number, address_street, address_zipcode)
+  VALUES ('Colina Cuervo', 'Brooklyn', 'Pancakes/Waffles', '759', 'Nostrand Avenue', '11216'),
+  ('Barboncino Pizza', 'Brooklyn', 'Pizza', '781', 'Franklin Avenue', '11238'),
+  ('Glorias Carribean Cuisine', 'Brooklyn', 'Caribbean', '764', 'Nostrand Avenue', '11216');
+````
+
+````
+SELECT id, name 
+FROM restaurants 
+WHERE name = 'Colina Cuervo' 
+OR name = 'Barboncino Pizza' 
+OR name = 'Glorias Carribean Cuisine';
+````
 
 ## 11. Update a record
 
