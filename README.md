@@ -18,7 +18,9 @@ Once you've successfully completed a drill, paste your query into a Gist to refe
 
 Write a query that returns all of the restaurants, with all of the fields.
 
-````SELECT * from restaurants;````
+````
+SELECT * from restaurants;
+````
 
 ## 2. Get Italian restaurants
 
@@ -112,7 +114,8 @@ Create a restaurant with values of your choosing, and return the id and name.
 ````
 INSERT INTO restaurants
   (name, borough, cuisine, address_building_number, address_street, address_zipcode)
-  VALUES ('Lula Bagel', 'Brooklyn', 'coffee', '816', 'Nostrand Avenue', '11216');
+  VALUES 
+  ('Lula Bagel', 'Brooklyn', 'coffee', '816', 'Nostrand Avenue', '11216');
 ````
 
 ````
@@ -127,7 +130,8 @@ Create three restaurants using a single command, with values of your choosing, r
 ````
 INSERT INTO restaurants
   (name, borough, cuisine, address_building_number, address_street, address_zipcode)
-  VALUES ('Colina Cuervo', 'Brooklyn', 'Pancakes/Waffles', '759', 'Nostrand Avenue', '11216'),
+  VALUES 
+  ('Colina Cuervo', 'Brooklyn', 'Pancakes/Waffles', '759', 'Nostrand Avenue', '11216'),
   ('Barboncino Pizza', 'Brooklyn', 'Pizza', '781', 'Franklin Avenue', '11238'),
   ('Glorias Carribean Cuisine', 'Brooklyn', 'Caribbean', '764', 'Nostrand Avenue', '11216');
 ````
@@ -144,15 +148,31 @@ OR name = 'Glorias Carribean Cuisine';
 
 Update the record whose value for `nyc_restaurant_id` is '30191841'. Change the `name` from 'Dj Reynolds Pub And Restaurant' to 'DJ Reynolds Pub and Restaurant'.
 
+````
+UPDATE restaurants 
+SET name = 'DJ Reynolds Pub and Restaurant' 
+WHERE nyc_restaurant_id = '30191841';
+````
+
 ## 12. Delete by `id`
 
 Delete the grade whose `id` is 10.
+
+````
+DELETE FROM grades 
+WHERE id = '10';
+````
 
 ## 13. A blocked delete
 
 Try deleting the restaurant with `id` of `22`. What error do you get?
 
 Paste the error text for the answer. We'll learn about foreign key constraints in the next reading, but take two seconds and come up with your own theory about what this message means.
+
+`
+ERROR:  update or delete on table "restaurants" violates foreign key constraint "grades_restaurant_id_fkey" on table "grades"
+DETAIL:  Key (id)=(22) is still referenced from table "grades".
+`
 
 
 ## 14. Create a table
