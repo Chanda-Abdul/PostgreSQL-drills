@@ -74,6 +74,17 @@ AND address_zipcode = '11372';
 
 Write a query that returns the id and name of five Italian restaurants in the 10012, 10013, or 10014 zip codes. The initial results (before limiting to five) should be alphabetically sorted.
 
+````
+SELECT id, name, address_zipcode 
+FROM restaurants 
+WHERE cuisine = 'Italian' 
+AND address_zipcode = '10012' 
+OR address_zipcode = '10013' 
+OR address_zipcode = '10014' 
+ORDER BY name 
+LIMIT 5;
+````
+
 ## 8. Create a restaurant
 
 Create a restaurant with the following properties:
