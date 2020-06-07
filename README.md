@@ -44,13 +44,31 @@ LIMIT 10;
 
 Write a query that returns the number of Thai restaurants.
 
+````
+SELECT COUNT(name) 
+FROM restaurants 
+WHERE cuisine = 'Thai';
+````
+
 ## 5. Count of restaurants
 
 Write a query that returns the total number of restaurants.
 
+````
+SELECT COUNT(*) 
+FROM restaurants;
+````
+
 ## 6. Count of Thai restaurants in zip code
 
 Write a query that returns the number of Thai restaurants in the 11372 zip code.
+
+````
+SELECT COUNT(*) 
+FROM restaurants 
+WHERE cuisine = 'Thai' 
+AND address_zipcode = '11372';
+````
 
 ## 7. Italian restaurants in one of several zip codes
 
